@@ -1,27 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overscroll-behavior: contain;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    @apply font-body text-text-dark bg-white antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+@layer components {
+  .section-dark {
+    @apply bg-navy-deep text-text-light;
+  }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .section-light {
+    @apply bg-white text-text-dark;
+  }
+
+  .section-navy {
+    @apply bg-navy text-text-light;
+  }
+
+  .section-blue {
+    @apply bg-primary-dark text-text-light;
+  }
+
+  .btn-primary {
+    @apply inline-block bg-accent hover:bg-accent-hover text-white font-heading font-bold uppercase tracking-wider
+           px-8 py-4 rounded-lg shadow-lg hover:shadow-xl
+           transition-all duration-200 hover:-translate-y-0.5
+           text-base md:text-lg cursor-pointer text-center;
+  }
+
+  .btn-secondary {
+    @apply inline-block bg-primary hover:bg-primary-dark text-white font-heading font-bold uppercase tracking-wider
+           px-8 py-4 rounded-lg shadow-lg hover:shadow-xl
+           transition-all duration-200 hover:-translate-y-0.5
+           text-base md:text-lg cursor-pointer text-center;
+  }
+
+  .container-main {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 }
