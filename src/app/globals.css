@@ -38,15 +38,15 @@
 
   .btn-primary {
     @apply inline-block bg-accent hover:bg-accent-hover text-white font-heading font-bold uppercase tracking-wider
-           px-8 py-4 rounded-lg shadow-lg hover:shadow-xl
-           transition-all duration-200 hover:-translate-y-0.5
+           px-8 py-4 rounded-lg shadow-lg
+           transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-accent/25
            text-base md:text-lg cursor-pointer text-center;
   }
 
   .btn-secondary {
     @apply inline-block bg-primary hover:bg-primary-dark text-white font-heading font-bold uppercase tracking-wider
-           px-8 py-4 rounded-lg shadow-lg hover:shadow-xl
-           transition-all duration-200 hover:-translate-y-0.5
+           px-8 py-4 rounded-lg shadow-lg
+           transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/25
            text-base md:text-lg cursor-pointer text-center;
   }
 
